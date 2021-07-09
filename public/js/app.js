@@ -1973,7 +1973,7 @@ var MyForm = /*#__PURE__*/function (_React$Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "submitHandler", function (event) {
+    _defineProperty(_assertThisInitialized(_this), "buttonHandler", function (event) {
       _this.setState({
         isSubmitted: true
       });
@@ -1994,7 +1994,7 @@ var MyForm = /*#__PURE__*/function (_React$Component) {
 
       if (this.state.isSubmitted) {
         displayText = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h1", {
-          children: ["My Name is ", this.state.name, ", and my favourite colour is: ", this.state.favColour]
+          children: ["My Name is ", this.state.name, ", and my favourite colour is ", this.state.favColour, "."]
         });
       } else {
         displayText = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
@@ -2021,7 +2021,7 @@ var MyForm = /*#__PURE__*/function (_React$Component) {
           onChange: this.colourChangeHandler
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           id: "submit",
-          onClick: this.submitHandler,
+          onClick: this.buttonHandler,
           children: "Click to show Text"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           children: "~~~~~~~~~~~~"

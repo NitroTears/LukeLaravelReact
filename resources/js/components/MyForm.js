@@ -19,7 +19,7 @@ class MyForm extends React.Component {
     this.setState({isSubmitted: false});
     this.setState({favColour: event.target.value});
   }
-  submitHandler = (event) => {
+  buttonHandler = (event) => {
     this.setState({isSubmitted: true});
   }
 
@@ -38,7 +38,7 @@ class MyForm extends React.Component {
         <input id='name' type='text' onChange={this.nameChangeHandler}/>
         <p>Enter your favourite colour:</p>
         <input id='colour' type='text' onChange={this.colourChangeHandler}/>
-        <button id='submit' onClick={this.submitHandler}>Click to show Text</button>
+        <button id='submit' onClick={this.buttonHandler}>Click to show Text</button>
         <p>~~~~~~~~~~~~</p>
         {displayText}
       </div>
