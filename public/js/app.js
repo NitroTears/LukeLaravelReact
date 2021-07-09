@@ -1955,11 +1955,19 @@ var MyForm = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "nameChangeHandler", function (event) {
       _this.setState({
+        isSubmitted: false
+      });
+
+      _this.setState({
         name: event.target.value
       });
     });
 
     _defineProperty(_assertThisInitialized(_this), "colourChangeHandler", function (event) {
+      _this.setState({
+        isSubmitted: false
+      });
+
       _this.setState({
         favColour: event.target.value
       });
@@ -1980,13 +1988,6 @@ var MyForm = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(MyForm, [{
-    key: "returnResultText",
-    value: function returnResultText() {
-      if (this.state.isSubmitted) {} else {
-        return null;
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
       var displayText;
@@ -1996,12 +1997,16 @@ var MyForm = /*#__PURE__*/function (_React$Component) {
           children: ["My Name is ", this.state.name, ", and my favourite colour is: ", this.state.favColour]
         });
       } else {
-        displayText = null;
+        displayText = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+          children: "Press the Button!"
+        });
       }
 
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
           children: "Hello World!"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: "~~~~~~~~~~~~"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           children: "Enter your name:"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
@@ -2017,7 +2022,7 @@ var MyForm = /*#__PURE__*/function (_React$Component) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           id: "submit",
           onClick: this.submitHandler,
-          children: "Submit and Show Text"
+          children: "Click to show Text"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           children: "~~~~~~~~~~~~"
         }), displayText]
